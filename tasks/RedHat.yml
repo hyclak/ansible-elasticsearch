@@ -1,0 +1,15 @@
+---
+# Red Hat installation
+- name: Add Elasticsearch Repository
+  yum_repository:
+    name: elasticsearch-{{elastic_repover}}
+    description: Elasticsearch repository for {{elastic_repover}} packages
+    baseurl: https://packages.elastic.co/elasticsearch/{{elastic_repover}}/centos
+    gpgcheck: yes
+    gpgkey: https://packages.elastic.co/GPG-KEY-elasticsearch
+    enabled: yes
+
+- name: Install Elasticsearch RPM
+  yum: 
+    name: elasticsearch-{{elastic_ver}}
+    state: installed
