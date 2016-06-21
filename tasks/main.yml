@@ -3,3 +3,6 @@
 - name: (RedHat) Install
   when: ansible_os_family == 'RedHat'
   include: RedHat.yml
+
+- name: Starting Elasticsearch
+  service: name=elasticsearch state=started enabled=yes
