@@ -13,3 +13,6 @@
   yum: 
     name: elasticsearch-{{elastic_ver}}
     state: installed
+
+- name: Register Elasticsearch Service
+  command: /sbin/chkconfig --add elasticsearch
