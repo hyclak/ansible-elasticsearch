@@ -15,4 +15,7 @@
     state: installed
 
 - name: Register Elasticsearch Service
-  command: /sbin/chkconfig --add elasticsearch
+  command: /bin/systemctl daemon-reload
+
+- name: Enable Elasticsearch Service
+  command: /bin/systemctl enable elasticsearch
