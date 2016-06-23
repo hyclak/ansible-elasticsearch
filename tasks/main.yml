@@ -1,6 +1,6 @@
 ---
 # tasks file for hyclak.elasticsearch
-- name: (RedHat) Install
+- name: '(RedHat) Install'
   when: ansible_os_family == 'RedHat'
   include: RedHat.yml
 
